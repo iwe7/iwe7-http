@@ -1,0 +1,12 @@
+<table *get="let list of table" class="table">
+  <thead class="thead-dark">
+    <tr>
+      <ng-container *ngTemplateOutlet="head"></ng-container>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of list">
+      <ng-container *ngTemplateOutlet="body;context:{$implicit: item}"></ng-container>
+    </tr>
+  </tbody>
+</table>
